@@ -36,7 +36,7 @@ const DetailsScreen = (props) => {
             <Box><VStack>
 
                 <Text >{title}</Text>
-              {poster ?  <Image alt={title} key={poster} source={{ uri: `https://image.tmdb.org/t/p/w500/${poster}` }} size='xl' />
+              {poster ?  <Image alt="Poster" key={poster} source={{ uri: `https://image.tmdb.org/t/p/w500/${poster}` }} size='xl' />
                 : <></>} 
                 <Text>{overview}</Text>
                 <HStack>

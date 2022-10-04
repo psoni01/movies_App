@@ -1,17 +1,17 @@
 import { Box, Button, Center, Divider, Heading, Image, Text, VStack, HStack } from "native-base";
 import { useNavigation } from '@react-navigation/native';
 
-const GenericCardTV = props => {
+const GenericCardSearch = props => {
     const { id, title, image, popularity, release} = props;
     const navigation = useNavigation();
-    const type = 'tv';
+    const type = 'movie';
 
     return (
         <Box borderWidth={1} borderRadius='md' pb={5} mb={10} >
             <HStack space={4}  >
 
                 <Box>
-                  {title && image ? <Image alt="Poster" source={{ uri: `https://image.tmdb.org/t/p/w500/${image}`}} size='xl' />
+                  {title && image ? <Image alt={title} source={{ uri: `https://image.tmdb.org/t/p/w500/${image}`}} size='xl' />
               : <></>}    </Box>
                 <Box px={4} py={4}>
                     <VStack >
@@ -33,4 +33,4 @@ const GenericCardTV = props => {
     );
 };
 
-export default GenericCardTV;
+export default GenericCardSearch;
